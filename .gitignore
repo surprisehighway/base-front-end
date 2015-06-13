@@ -1,0 +1,6 @@
+# App
+.DS_Store
+php_errors.log
+.sass-cache
+composer.phar
+composer.lock

@@ -1,0 +1,30 @@
+/*
+ * styles.scss
+ * Global style imports. This file should contain @import rules only.
+ */
+
+/* Shared + Variables.
+================================================== */
+@import "bourbon";
+@import "neat";
+
+@import "variables";
+@import "mixins";
+
+/* Vendor + Component imports.
+================================================== */
+@import "../components/normalize-scss/_normalize.scss";
+
+/* Site specific imports.
+================================================== */
+@import "base";
+@import "grid";
+
+//component modules
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/header";
+@import "modules/footer";
+
+//page modules
+@import "modules/styleguide";

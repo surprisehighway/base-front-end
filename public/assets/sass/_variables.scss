@@ -1,0 +1,55 @@
+/* 
+
+	Variables 
+
+*/
+
+/* Colors */
+$color-blue: #00aef0;
+$color-orange: #f26522;
+
+$gray: #666666;
+$gray-dark: #333333;
+$gray-light: #d3d3d3;
+
+$white: #ffffff;
+
+/* Text and link colors */
+$text-color: $gray-dark;
+$text-color-light: $gray;
+
+$link-color: $color-blue;
+$link-color-hover: shade($link-color, 20%);
+
+/* Highlight and feedback colors */
+$color-highlight: #f8f2c6;
+$color-error: #990000;
+$color-success: #2d6f01;
+
+/* Font stacks */
+$font-family-base: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$font-family-headline: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$font-family-display: $font-family-headline;
+$font-family-plain: Arial, sans-serif;
+
+/* Type defaults */
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+/* Bourbon global base for em() and rem() */
+$em-base: $font-size-base !global; 
+
+/* Neat Grid */
+$grid-columns: 12 !global;
+$max-width: em(1170px) !global;
+
+/* Breakpoints - Mobile First Method */
+$custom: new-breakpoint(min-width 320px); 	/* Custom, iPhone Retina */
+$xsmall: new-breakpoint(min-width 480px);	/* Extra Small Devices, Phones */
+$small: new-breakpoint(min-width 768px);	/* Small Devices, Tablets */
+$medium: new-breakpoint(min-width 992px);	/* Medium Devices, Desktops */
+$large: new-breakpoint(min-width 1200px);	/* Large Devices, Wide Screens */
+
+/* Transition defaults */
+$transition-link: .1s linear;
+$transition-button: .2s linear;

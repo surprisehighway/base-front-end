@@ -1,0 +1,28 @@
+{
+  "name": "Base Front End",
+  "version": "0.0.0",
+  "homepage": "https://github.com/surprisehighway/base-front-end",
+  "authors": [
+    "Rob Knecht <rob@surprisehighway.com>",
+    "Mike Kroll <mike@surprisehighway.com>"
+  ],
+  "description": "Website",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.0",
+    "jquery": "~2.0.3",
+    "modernizr": "~2.8.3"
+  },
+  "devDependencies": {
+    "normalize-scss": "~3.0.3",
+    "jquery-placeholder": "~2.1.2"
+  }
+}

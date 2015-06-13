@@ -1,0 +1,24 @@
+{
+  "author": "Surpise Highway",
+  "name": "base-front-end",
+  "version": "0.0.1",
+  "description": "Base front-end workflow for Surpise Highway.",
+  "license": "ISC",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surprisehighway/base-front-end.git"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "gulp-concat": "~2.2.0",
+    "gulp-livereload": "~3.2.0",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-rename": "~1.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-uglify": "~0.3.2",
+    "gulp-watch": "~0.6.10",
+    "node-bourbon": "^4.2.2",
+    "node-neat": "^1.7.1-beta1"
+  }
+}
