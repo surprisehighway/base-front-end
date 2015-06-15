@@ -310,7 +310,7 @@
                 </label>
             </div>
             <div class="row radio-inline">
-                <p class="label">Inline Checkboxes:</p>
+                <p class="label">Inline Radio Buttons:</p>
                 <label for="r2-1">
                     <input type="radio" name="r2" id="r2-1" value="4">
                     Option One
