@@ -1,3 +1,5 @@
+        </div> <!-- .main -->
+
         <footer class="site-footer" role="content-info">
             <!-- Site footer here -->
         </footer>
