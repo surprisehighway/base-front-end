@@ -1,11 +1,11 @@
 <?php require '_includes/site-header.php'; ?>
-	
+
 	<div class="container" style="padding-top:30px;padding-bottom:30px;">
 
 		<!-- Style and component development guides -->
 		<h2>Style Guide</h2>
 		<ul>
-			<li><a href="styleguide.php">Style Guide</a></li>
+			<li><a href="/mockups/styleguide.php">Style Guide</a></li>
 		</ul>
 
 		<!-- Be sure to include project references -->
@@ -18,8 +18,8 @@
 		<!-- Template and page mockups -->
 		<h2>Mockups</h2>
 		<ul>
-			<li><a href="default.php">Default Page</a></li>
-			<li><a href="home.php">Home Page</a></li>
+			<li><a href="/mockups/default.php">Default Page</a></li>
+			<li><a href="/mockups/home.php">Home Page</a></li>
 		</ul>
 
 	</div>
