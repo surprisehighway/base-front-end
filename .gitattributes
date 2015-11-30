@@ -1,1 +1,9 @@
 * text=auto
+*.css linguist-vendored
+*.less linguist-vendored
+public/assets/components/* linguist-vendored
+public/assets/js/build/* linguist-vendored
+public/assets/vendor/* linguist-vendored
+public/mockups/* linguist-vendored
+public/assets/js/build/*.js binary
+public/assets/css/*.css binary
