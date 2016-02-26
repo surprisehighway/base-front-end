@@ -36,7 +36,7 @@ var gulp = require('gulp'),
     Process our SASS files and minify the resultant CSS.
 */
 gulp.task('styles', function() {
-    gulp.src(sass_dir + '/styles.scss')
+    gulp.src(sass_dir + '/**/*.scss')
     .pipe(sass({
         includePaths: require('node-neat').includePaths
     }))
@@ -52,7 +52,6 @@ gulp.task('styles', function() {
 });
 
 
-
 /*
     Concatenate and minify our JavaScript assets.
 */
@@ -65,7 +64,6 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(js_build_dir))
         .pipe(livereload());
 });
-
 
 
 /*
