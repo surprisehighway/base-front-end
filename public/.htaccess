@@ -216,45 +216,76 @@ AddDefaultCharset utf-8
   # RewriteBase /
 </IfModule>
 
-# ------------------------------------------------------------------------------
-# | Suppressing / Forcing the "www." at the beginning of URLs                  |
-# ------------------------------------------------------------------------------
 
-# The same content should never be available under two different URLs especially
-# not with and without "www." at the beginning. This can cause SEO problems
-# (duplicate content), therefore, you should choose one of the alternatives and
-# redirect the other one.
-
-# By default option 1 (no "www.") is activated:
-# http://no-www.org/faq.php?q=class_b
-
-# If you'd prefer to use option 2, just comment out all the lines from option 1
-# and uncomment the ones from option 2.
-
-# IMPORTANT: NEVER USE BOTH RULES AT THE SAME TIME!
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Option 1: rewrite www.example.com → example.com
+# ----------------------------------------------------------------------
+# Suppress/Force the "www." at the beginning of URLs and force SSL
+# ----------------------------------------------------------------------
+# Only use one option at a time. Defaults to Option 1
+#
+# IMPORTANT: If hosted by Arcustech, replace RewriteCond %{HTTPS}
+# with RewriteCond %{ENV:SECURE_REDIRECT}
+#
+# ----------------------------------------------------------------------
+# Option 1:
+# Rewrite "www.example.com -> example.com"
+# ----------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
+    # --------------------------------------
+    # If not an SSL request WITHOUT WWW
+    # --------------------------------------
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+    RewriteCond %{HTTP_HOST} !^(local\..+|staging\..+|.+dev|.+crudecode.+)$ [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # --------------------------------------
+    # If not an SSL request WITH WWW
+    # --------------------------------------
     RewriteCond %{HTTPS} !=on
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+    RewriteCond %{HTTP_HOST} !^(local\..+|staging\..+|.+dev|.+crudecode.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+    # --------------------------------------
+    # If SSL request WITH WWW
+    # --------------------------------------
+    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# ----------------------------------------------------------------------
+# Option 2:
+# Rewrite "example.com -> www.example.com"
+# Uncomment all RewriteCond and RewriteRule lines below
+# ----------------------------------------------------------------------
 
-# Option 2: rewrite example.com → www.example.com
-
-# Be aware that the following might not be a good idea if you use "real"
-# subdomains for certain parts of your website.
-
-# <IfModule mod_rewrite.c>
-#    RewriteCond %{HTTPS} !=on
-#    RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-#    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
+<IfModule mod_rewrite.c>
+    # --------------------------------------
+    # If an SSL request WITHOUT WWW
+    # --------------------------------------
+    # RewriteCond %{HTTPS} on
+    # RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+    # RewriteCond %{HTTP_HOST} !^(local\..+|staging\..+|.+dev|.+crudecode.+)$ [NC]
+    # RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    
+    # --------------------------------------
+    # If not an SSL request WITHOUT WWW
+    # --------------------------------------
+    # RewriteCond %{HTTPS} !=on
+    # RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+    # RewriteCond %{HTTP_HOST} !^(local\..+|staging\..+|.+dev|.+crudecode.+)$ [NC]
+    # RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    
+    # --------------------------------------
+    # If not SSL request WITH WWW
+    # --------------------------------------
+    # RewriteCond %{HTTPS} !=on
+    # RewriteCond %{HTTP_HOST} ^www\..+$ [NC]
+    # RewriteCond %{HTTP_HOST} !^(local\..+|staging\..+|.+dev|.+crudecode.+)$ [NC]
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
 
 
 # ##############################################################################
