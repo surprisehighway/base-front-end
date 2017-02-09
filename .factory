@@ -5,4 +5,5 @@
 
 	"after_create": [
 		"chown -R deploy:www-data ./"
+	]
 }
