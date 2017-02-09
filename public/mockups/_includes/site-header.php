@@ -7,7 +7,9 @@
         <meta name="description" content="<?php if (isset($description)) echo $description; ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <link rel="stylesheet" href="/assets/css/styles.css">
+        <!-- bower:css -->
+        <!-- endbower -->
+        <link rel="stylesheet" href="/assets/css/styles.min.css">
         <!--[if lt IE 9]><script src="/assets/components/html5-shiv/dist/html5shiv.js"></script><![endif]-->
         <script src="/assets/components/modernizr/modernizr.js"></script>
     </head>

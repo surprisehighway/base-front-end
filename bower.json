@@ -1,13 +1,13 @@
 {
-  "name": "Base Front End",
-  "version": "0.0.0",
-  "homepage": "https://github.com/surprisehighway/base-front-end",
+  "name": "base-front-end",
+  "version": "0.0.1",
+  "homepage": "http://www.surprisehighway.com",
   "authors": [
     "Rob Knecht <rob@surprisehighway.com>",
     "Mike Kroll <mike@surprisehighway.com>"
   ],
-  "description": "Website",
-  "license": "ISC",
+  "description": "A project by Surpise Highway.",
+  "license": "UNLICENSED",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -17,12 +17,17 @@
     "tests"
   ],
   "dependencies": {
+    
+      
+    
+    
+    
     "html5shiv": "~3.7.0",
     "jquery": "~2.0.3",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "jquery-placeholder": "~2.1.2"
   },
   "devDependencies": {
-    "normalize-scss": "~3.0.3",
-    "jquery-placeholder": "~2.1.2"
+    "normalize-scss": "~3.0.3"
   }
 }

@@ -1,10 +1,18 @@
-/* 
+/*
 
   Grid is used to define common grid components for the project.
 
-  
+
 
 */
+
+/* Breakpoints - Mobile First Method */
+$custom: new-breakpoint(min-width 320px);   /* Custom, iPhone Retina */
+$xsmall: new-breakpoint(min-width 480px); /* Extra Small Devices, Phones */
+$small: new-breakpoint(min-width 768px);  /* Small Devices, Tablets */
+$medium: new-breakpoint(min-width 992px); /* Medium Devices, Desktops */
+$large: new-breakpoint(min-width 1200px); /* Large Devices, Wide Screens */
+$xlarge: new-breakpoint(min-width 1400px);  /* X-Large Devices, Wide Screens */
 
 /* Grid / Layout */
 .container {

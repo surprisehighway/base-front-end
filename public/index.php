@@ -1,1 +1,0 @@
-<?php require 'mockups/index.php'; ?>

@@ -3,10 +3,14 @@
 	<div class="container" style="padding-top:30px;padding-bottom:30px;">
 
 		<!-- Style and component development guides -->
+		<h1>Base Front-End</h1>
+
+	
 		<h2>Style Guide</h2>
 		<ul>
 			<li><a href="/mockups/styleguide.php">Style Guide</a></li>
 		</ul>
+	
 
 		<!-- Be sure to include project references -->
 		<h2>Reference</h2>

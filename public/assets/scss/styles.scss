@@ -5,26 +5,41 @@
 
 /* Shared + Variables.
 ================================================== */
-@import "bourbon";
-@import "neat";
-
 @import "variables";
-@import "mixins";
+
+
+	@import "bourbon";
+	@import "neat-settings";
+	@import "neat";
+
+
+
+
+	@import "mixins";
 
 /* Vendor + Component imports.
 ================================================== */
-@import "../components/normalize-scss/_normalize.scss";
+
+	@import "../components/normalize-scss/_normalize.scss";
+
+
+
+
 
 /* Site specific imports.
 ================================================== */
-@import "base";
-@import "grid";
+	@import "base";
+
+
+	@import "grid";
+
 
 //component modules
-@import "modules/buttons";
-@import "modules/forms";
-@import "modules/header";
-@import "modules/footer";
+	@import "modules/buttons";
+	@import "modules/forms";
+	@import "modules/header";
+	@import "modules/footer";
 
 //page modules
-@import "modules/styleguide";
+
+	@import "modules/styleguide";

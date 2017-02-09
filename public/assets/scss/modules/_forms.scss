@@ -8,7 +8,9 @@ form, fieldset {
     margin: 0;
 }
 
+
 #{$all-text-inputs},
+
 textarea,
 select {
     font-size: 15px;
@@ -23,9 +25,11 @@ select {
     background: #fafafa;
     border-radius: 4px;
 
+    
     @include placeholder {
     	color: #aaa;
     }
+    
 
     // IE placeholder class
     &.placeholder {
@@ -33,12 +37,15 @@ select {
     }
 }
 
+
 textarea {
     height: auto;
     // use rows="8" to adjust the height in your markup
 }
 
+
 #{$all-text-inputs-focus},
+
 textarea:focus,
 select:focus {
     outline: 0;
@@ -74,7 +81,7 @@ input[type="file"] {
 
         &:last-child {
             margin-bottom: 0;
-        } 
+        }
     }
 
     input {
@@ -101,7 +108,10 @@ input[type="file"] {
 }
 
 // Validation
+
+
 #{$all-text-inputs},
+
 textarea {
     &.error {
         border-color: #de2525;

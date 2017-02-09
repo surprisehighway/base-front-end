@@ -1,6 +1,6 @@
-/* 
+/*
 
-	Variables 
+	Variables
 
 */
 
@@ -35,20 +35,6 @@ $font-family-plain: Arial, sans-serif;
 /* Type defaults */
 $font-size-base: 16px;
 $line-height-base: 1.5;
-
-/* Bourbon global base for em() and rem() */
-$em-base: $font-size-base !global; 
-
-/* Neat Grid */
-$grid-columns: 12 !global;
-$max-width: em(1170px) !global;
-
-/* Breakpoints - Mobile First Method */
-$custom: new-breakpoint(min-width 320px); 	/* Custom, iPhone Retina */
-$xsmall: new-breakpoint(min-width 480px);	/* Extra Small Devices, Phones */
-$small: new-breakpoint(min-width 768px);	/* Small Devices, Tablets */
-$medium: new-breakpoint(min-width 992px);	/* Medium Devices, Desktops */
-$large: new-breakpoint(min-width 1200px);	/* Large Devices, Wide Screens */
 
 /* Transition defaults */
 $transition-link: .1s linear;

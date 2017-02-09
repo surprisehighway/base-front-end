@@ -1,8 +1,53 @@
 /*
 
-	Style-guide-only styles
+	Bourbon Neat Style Guide styles
 
 */
+
+body.styleguide {
+	position: relative;
+}
+
+.sg-container {
+  @include outer-container;
+}
+
+.sg-banner {
+	.wrap {
+		@include span-columns(12);
+		margin: 30px 0 30px;
+
+		@include media($medium) {
+		    @include span-columns(10);
+		    @include shift(2);
+		}
+	}
+}
+
+.sg-menu {
+	@include span-columns(12);
+
+	@include media($medium) {
+	    @include span-columns(1);
+	    position: fixed;
+	}
+
+	a { display: inline-block; }
+}
+
+.sg-main {
+	@include span-columns(12);
+
+	@include media($medium) {
+	    @include span-columns(10);
+	    @include shift(2);
+	}
+
+	h4[id^="*"], aside h4[id^="*"] {
+		display: block;
+		font-size: 22px !important;
+	}
+}
 
 .sg-header {
 	margin: 30px 0 30px;
@@ -33,9 +78,10 @@
 }
 
 .sg-swatches {
-	@include clearfix();
+	@include clearfix(); // Bourbon mixin
 	margin-left: -20px;
 }
+
 .sg-swatch {
 	float: left;
 	border: 1px solid $gray-light;
@@ -62,6 +108,7 @@
 .sg-no-margin {
 	margin: 0;
 }
+
 h1.sg-no-margin,
 h2.sg-no-margin,
 h3.sg-no-margin,

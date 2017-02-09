@@ -5,60 +5,62 @@
 */
 
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html, button, input, select, textarea {
-    color: $text-color;
-    font-family: $font-family-base;
-    @include font-smoothing(on);
+	color: $text-color;
+	font-family: $font-family-base;
+	@include font-smoothing(on);
 }
 
 body {
-    font-size: $font-size-base;
-    line-height: $line-height-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
 }
+
 
 @include selection {
-    background: $color-highlight;
-    text-shadow: none;
+	background: $color-highlight;
+	text-shadow: none;
 }
 
-a {
-    color: $link-color;
-    text-decoration: none;
-    transition: all $transition-link;
 
-    &:hover {
-        color: $link-color-hover;
-    }
-    &:active {
-        outline: 0;
-    }
-    &.plain {
-        color: inherit;
-        &:hover {
-           color: $link-color;
-        }
-    }
+a {
+	color: $link-color;
+	text-decoration: none;
+	transition: all $transition-link;
+
+	&:hover {
+		color: $link-color-hover;
+	}
+	&:active {
+		outline: 0;
+	}
+	&.plain {
+		color: inherit;
+		&:hover {
+		   color: $link-color;
+		}
+	}
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid $gray-light;
-    margin: rem(32) 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $gray-light;
+	margin: 2rem 0;
+	padding: 0;
 }
 
 img {
-    vertical-align: middle;
-    max-width: 100%;
+	vertical-align: middle;
+	max-width: 100%;
 }
 
 nav ul {
@@ -69,7 +71,7 @@ nav ul {
 	li {
 		margin: 0;
 		padding: 0;
-        text-indent: 0;
+		text-indent: 0;
 	}
 }
 
@@ -78,7 +80,7 @@ code, kbd, pre, samp {
 }
 
 mark, .mark {
-    background-color: $color-highlight;
+	background-color: $color-highlight;
 }
 
 small, .small {
@@ -197,7 +199,7 @@ ul.list-unstyled, ul.list-plain {
 }
 
 dt, dd {
-  	margin-bottom: 0.1875em;
+	margin-bottom: 0.1875em;
 	line-height: 1.3125;
 }
 
@@ -213,33 +215,33 @@ dd {
 /* blockquotes */
 
 blockquote {
-    font-size: 28px;
-    font-style: italic;
-    font-weight: normal;
-    line-height: 1.2;
-    font-family: $font-family-display;
-    border-left: 5px solid $gray-light;
+	font-size: 28px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2;
+	font-family: $font-family-display;
+	border-left: 5px solid $gray-light;
 
-    p {
-        font-size: 28px;
-        line-height: 1.2;
-        margin: 0 0 0.5em 0;
-        padding: 0 0 0 22px;
-    }
+	p {
+		font-size: 28px;
+		line-height: 1.2;
+		margin: 0 0 0.5em 0;
+		padding: 0 0 0 22px;
+	}
 
-    footer,
-    cite,
-    p.cite {
-        font-size: 18px;
-        font-weight: normal;
-        font-style: normal;
-        text-indent: 0;
-        padding: 0 0 0 27px;
-        color: $text-color-light;
-        font-family: $font-family-base;
+	footer,
+	cite,
+	p.cite {
+		font-size: 18px;
+		font-weight: normal;
+		font-style: normal;
+		text-indent: none;
+		padding: 0 0 0 27px;
+		color: $text-color-light;
+		font-family: $font-family-base;
 
-        &:before {
-        	content: '\2014 \00A0';
-        }
-    }
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
 }
