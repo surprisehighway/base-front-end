@@ -1,0 +1,8 @@
+{
+	"files": [],
+
+	"env_detection": "hostname",
+
+	"after_create": [
+		"chown -R deploy:www-data ./"
+}
