@@ -1,22 +1,21 @@
+<?php require('_includes/_functions.php') ?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Base Front-End | Style Guide</title>
+        <title>Base Front End | Style Guide</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <!-- bower:css -->
         <!-- endbower -->
-        <link rel="stylesheet" href="/assets/css/styles.min.css">
-        <!--[if lt IE 9]><script src="/assets/components/html5-shiv/dist/html5shiv.js"></script><![endif]-->
-        <script src="/assets/components/modernizr/modernizr.js"></script>
+        <link rel="stylesheet" href="<?php echo '/assets/dist/'.gulp_rev('css/styles.min.css'); ?>">
     </head>
     <body class="styleguide">
 
         <header class="sg-container sg-banner">
             <div class="wrap">
-                <h1>Base Front-End - Default Style Guide</h1>
+                <h1>Base Front End - Default Style Guide</h1>
                 <p>Colors, typography, and base styles for this project.</p>
             </div>
         </header>
@@ -33,8 +32,10 @@
                 <a href="#body">Body Copy</a><br>
                 <a href="#blockquotes">Blockquotes</a><br>
                 <a href="#lists">Lists</a><br>
-                <a href="#buttons">Buttons</a>
-                <a href="#forms">Form Elements</a>
+                <a href="#buttons">Buttons</a><br>
+                <a href="#forms">Form Elements</a><br>
+                <hr>
+                <a href="/mockups">Mockups</a><br>
             </aside>
 
             <main class="sg-main">
@@ -82,28 +83,21 @@
                     <h5>Font Stacks <a href="#fonts">#</a></h5>
                 </div>
                 <div class="sg-section">
-                    <p class="sg-quiet" style="float:right;margin:0;"><code>$font-family-default</code></p>
-                    <p class="font-default">
-                        Default font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif<br>
-                        <em>italic</em>, <strong>bold</strong>, <strong><em>bold italic</em></strong>
-                    </p>
-
-                    <p class="sg-quiet" style="float:right;margin:0;"><code>$font-family-headline</code></p>
-                    <p class="font-headline">
-                        Headline font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif<br>
-                        <em>italic</em>, <strong>bold</strong>, <strong><em>bold italic</em></strong>
-                    </p>
-
-                    <p class="sg-quiet" style="float:right;margin:0;"><code>$font-family-display</code></p>
-                    <p class="font-display">
-                        Display font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif<br>
-                        <em>italic</em>, <strong>bold</strong>, <strong><em>bold italic</em></strong>
-                    </p>
-
-                    <p class="sg-quiet" style="float:right;margin:0;"><code>$font-family-plain</code></p>
                     <p class="font-plain">
-                        Plain font-family: Arial, sans-serif<br>
-                        <em>italic</em>, <strong>bold</strong>, <strong><em>bold italic</em></strong>
+                        <span class="font-plain sg-quiet" style="font-size:13px;">Default font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif</span><br>
+                        <span style="font-size: 18px;">Text, <em>Text italic</em>, <strong>Text bold</strong>, <strong><em>Text bold italic</em></strong></span>
+                    </p>
+                    <p class="font-plain">
+                        <span class="font-plain sg-quiet" style="font-size:13px;">Headline font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif</span><br>
+                        <span class="font-headline" style="font-size: 18px;">Headline, <em>Headline italic</em>, <strong>Headline bold</strong>, <strong><em>Headline bold italic</em></strong></span>
+                    </p>
+                    <p class="font-plain">
+                        <span class="font-plain sg-quiet" style="font-size:13px;">Display font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif</span><br>
+                        <span class="font-display" style="font-size: 18px;">Headline, <em>Headline italic</em>, <strong>Headline bold</strong>, <strong><em>Headline bold italic</em></strong></span>
+                    </p>
+                    <p class="font-plain">
+                        <span class="font-plain sg-quiet" style="font-size:13px;">Plain font-family: Arial, sans-serif</span><br>
+                        <span style="font-size: 16px;">Arial, <em>Arial italic</em>, <strong>Arial bold</strong>, <strong><em>Arial bold italic</em></strong></span>
                     </p>
                 </div><!-- /.sg-section -->
 
@@ -408,12 +402,12 @@
             <!-- Site footer here -->
         </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/assets/components/jquery/jquery.min.js"><\/script>')</script>
 
         <!-- bower:js -->
         <!-- endbower -->
 
-        <script src="/assets/js/build/site.min.js"></script>
+        <script src="<?php echo '/assets/dist/'.gulp_rev('js/site.min.js'); ?>"></script>
     </body>
 </html>

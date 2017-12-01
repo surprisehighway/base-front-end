@@ -4,13 +4,13 @@
             <!-- Site footer here -->
         </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/assets/components/jquery/jquery.min.js"><\/script>')</script>
 
         <!-- bower:js -->
         <!-- endbower -->
 
-        <script src="/assets/js/build/site.min.js"></script>
+        <script src="<?php echo '/assets/dist/'.gulp_rev('js/site.min.js'); ?>"></script>
 
         <?php if(isset($additional_scripts)) echo $additional_scripts; ?>
 

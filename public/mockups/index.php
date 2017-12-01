@@ -3,7 +3,7 @@
 	<div class="container" style="padding-top:30px;padding-bottom:30px;">
 
 		<!-- Style and component development guides -->
-		<h1>Base Front-End</h1>
+		<h1>Base Front End</h1>
 
 	
 		<h2>Style Guide</h2>

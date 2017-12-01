@@ -1,5 +1,5 @@
 {
-  "name": "base-front-end",
+  "name": "surprise-generator",
   "version": "0.0.1",
   "homepage": "http://www.surprisehighway.com",
   "authors": [
@@ -17,15 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    
-      
-    
-    
-    
-    "html5shiv": "~3.7.0",
-    "jquery": "~2.0.3",
-    "modernizr": "~2.8.3",
-    "jquery-placeholder": "~2.1.2"
+    "jquery": "~3.2.1"
   },
   "devDependencies": {
     "normalize-scss": "~3.0.3"
