@@ -8,17 +8,31 @@ Asset and Directory Structure
 
 <pre>
 .
-├── public
+├── <strong>gulp-tasks</strong> <small>(tasks defined in gulpfile.babel.js)</small>
+├── <strong>public</strong>
 │   ├── assets
 │   │   ├── components <small>(bower-installed components)</small>
 │   │   ├── <strong>dist</strong> <small>(js and css compiled from source)</small>
 │   │   ├── img <small>(site design assets)</small>
-│   │   ├── uploads <small>(Craft user uploads)</small>
 │   │   └── vendor
-│   └── index.php
-└── <strong>source</strong>
-    ├── js
-    └── scss
+│   └── mockups
+│       ├── _includes <small>(php header, footer, and functions)</small>
+│       ├── assets <small>(mockup assets - not to be used in production)</small>
+│       ├── default.php <small>(placeholder)</small>
+│       ├── home.php <small>(placeholder)</small>
+│       ├── index.php <small>(mockups index)</small>
+│       └── <strong>styleguide.php</strong>
+├── <strong>source</strong> <small>(source scripts and styles)</small>
+│   ├── js <small>(source scripts)</small>
+│   └── scss  <small>(source styles)</small>
+├── .babelrc <small>(Babel configuration file)</small>
+├── .bowerrc <small>(Sets the bower path)</small>
+├── .factory <small>(Tasks to run after SH Factory site generation)</small>
+├── .nvmrc <small>(Node version to use for nvm)</small>
+├── bower.json <small>(Bower packages manifest)</small>
+├── gulpfile.babel.json <small>(gulp configuration)</small>
+├── package.json <small>(NPM packages manifest)</small>
+└── README.md <small>(Project read me file)</small>
 </pre>
 
 
@@ -47,9 +61,13 @@ The preferred workflow is to use [nvm](https://github.com/creationix/nvm/blob/ma
 4. Run `$ npm install` to install each node package as defined in the project's packages.json dependency list.
 5. Run `$ gulp` to start watch tasks (defined in gulpfile.js). You're all set, get to work!
 
+##### Notes
+
 Note that BrowserSync can run a static server but in this case we need to define the `local_proxy` running php.
 
 You can also run `$ gulp dist` to manually re-compile assets without launching BrowserSync.
+
+Assets are revved and a manifest is created in the `/public/assets/dist` directory. There is a php function included in the mockups that reads teh manifest and outputs the revved asset filename.
 
 
 Mockups
