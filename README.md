@@ -48,7 +48,7 @@ For developers that have not used Gulp before follow the first set of directions
 The preferred workflow is to use [nvm](https://github.com/creationix/nvm/blob/master/README.md#install-script). This will act as a wrapper to install and use the correct version of node as defined in `.nvmrc`.
 
 1. CD to the project root.
-2. If using nvm, install the [Gulp CLI](https://www.npmjs.com/package/gulp-cli) only and node will use the local project gulp using: `$ sudo npm install gulp-cli -g`<br>-- OR --<br>install the full [Gulp](http://gulpjs.com/) package globally using: `$ sudo npm install gulp -g`.
+2. If using nvm, install the [Gulp CLI](https://www.npmjs.com/package/gulp-cli) only and node will use the local project gulp using:<br>  `$ sudo npm install gulp-cli -g`<br>-- OR --<br>install the full [Gulp](http://gulpjs.com/) package globally using:<br>`$ sudo npm install gulp -g`.
 3. In `gulpfile.babel.js` set the name of your local host to proxy for BrowserSync.
 4. Run `$ npm install` to install each node package as defined in the project's packages.json dependency list.
 5. Now, just run `$ gulp` to start watch tasks (defined in `gulpfile.babel.js`).
