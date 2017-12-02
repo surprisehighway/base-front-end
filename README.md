@@ -61,13 +61,13 @@ The preferred workflow is to use [nvm](https://github.com/creationix/nvm/blob/ma
 4. Run `$ npm install` to install each node package as defined in the project's packages.json dependency list.
 5. Run `$ gulp` to start watch tasks (defined in gulpfile.js). You're all set, get to work!
 
-##### Notes
+##### Notes:
 
-Note that BrowserSync can run a static server but in this case we need to define the `local_proxy` running php.
+You can also just run `$ gulp dist` to manually re-compile assets without using or launching BrowserSync.
 
-You can also run `$ gulp dist` to manually re-compile assets without launching BrowserSync.
+BrowserSync can run a static server, but in this case we need to define the `local_proxy` running php for our mockups. This would be the hostname you set up locally using MAMP or Vagrant.
 
-Assets are revved and a manifest is created in the `/public/assets/dist` directory. There is a php function included in the mockups that reads teh manifest and outputs the revved asset filename.
+Gulp will revision the compiled assets using gulp-rev and a manifest is created in the `/public/assets/dist` directory. There is a php function included in the mockups that reads the manifest and outputs the revved asset filename.
 
 
 Mockups
